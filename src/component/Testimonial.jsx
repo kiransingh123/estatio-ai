@@ -13,7 +13,7 @@ export default function testimonial() {
 			<div className="row feture-tabs">
 				<div className="col-lg-7">
 					<div className="content">
-					<h2>From Great Our Clients</h2>
+					<h2>From Our Great Initial Users</h2>
 					</div>
 				</div>
 				<div className="col-lg-5">
@@ -40,7 +40,9 @@ export default function testimonial() {
                                     <span className="arrow">
                                         <img src="assets/img/img_new/Vector_team.png" />
                                     </span>
-                                    <p className="card-text">"Estatio.AI saved me hours of scrolling through endless rental listings! Their personalized recommendations were spot-on, and the chatbot made the whole process feel like chatting with a friend. No more stress, just easy renting!"</p>
+                                    <p className="card-text">"Estatio saved me hours of scrolling through endless rental listings! Their personalized
+recommendations were spot-on, and the chatbot made the whole process feel like chatting with a
+friend."</p>
                                 </div>
                                 </div>
                             </div>
@@ -54,12 +56,14 @@ export default function testimonial() {
                                     <span className="arrow">
                                         <img src="assets/img/img_new/Vector_team.png" />
                                     </span>
-                                    <p className="card-text">"I used to dread apartment hunting, but Estatio.AI changed the game. The AI recommendations were so accurate, and the comprehensive property insights gave me all the info I needed. It's like having a personal assistant for rental searches!"</p>
+                                    <p className="card-text">"I used to dread apartment hunting, but Estatio changed the game. The AI recommendations were
+really nice, and the comprehensive property insights gave me all the info I needed. It's like having a
+personal assistant &#x1F60A;"</p>
                                 </div>
                                 </div>
                             </div>
                         </SwiperSlide>
-                        <SwiperSlide>
+                        {/* <SwiperSlide>
                             <div className="swiper-slide">
                                 <div className="card">
                                 <img className="card-img-top slider-img" src="assets/img/img_new/Adam_Stone2.png" alt="Card image"  />
@@ -72,7 +76,7 @@ export default function testimonial() {
                                 </div>
                                 </div>
                             </div>
-                        </SwiperSlide>  
+                        </SwiperSlide>   */}
                     </Swiper>
 					</div>
 				</div>

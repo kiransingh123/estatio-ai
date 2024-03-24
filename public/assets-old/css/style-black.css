@@ -1,0 +1,134 @@
+body {
+  background-color: black!important;
+}
+.navbar a{
+	color: #ffffff!important;
+}
+.socialicon ul li a{
+	color: #ffffff!important;
+}
+.about h2 {
+    color: #BDA472 !important;
+}
+.about h3{
+	color: #ffffff!important;
+}
+.about p{
+	color: #ffffff!important;
+}
+.borderwe:after{
+	border: 4px solid snow;
+}
+.leftsection p{
+	color: #BDA472 !important;
+}
+.year span{
+	color: #bda472!important;
+}
+.values .box h3{
+	color: #bda472!important;
+	margin-bottom: 20px;
+}
+.section-header p{
+	color: #ffffff!important;
+}
+.section-header {
+    background-image: url(../img/Groupbgnew.png);
+}
+/*.rightimg:after {
+    background-image: url(../img/about_bgnew.png);
+}*/
+.Trending_heading{
+	color: #ffffff!important;
+}
+/*.bgright {
+    background-image: url(../img/about_bgnew1.png);
+}*/
+.team .card p{
+	color: black !important;
+	font-size: 15px;
+    line-height: 26px;
+}
+.back-to-top{
+	background:#BDA472 !important;
+}
+.back-to-top i{
+	color: white !important;
+
+}
+.contact .info-box p{
+	color: white!important;
+}
+.contact .info-box h3{
+	color: #ebebeb!important;
+}
+.contact .info-box i{
+	color: #f9f9f9!important;
+}
+.contact .info-box{
+	color: black !important;;
+    background: #151515!important;;
+    padding: 30px;
+    box-shadow: 1px 1px 6px 0px #000000!important;
+}
+.contact .php-email-form{
+	color: black !important;
+    padding: 30px;
+}
+.form-control{
+	background-color: #7a7373!important;
+}
+.footer {
+    background: #151515!important;
+}
+.footer .copyright{
+	color: white!important;
+}
+.header.header-scrolled{
+	background: black !important;
+}
+/* #topbannervideo{
+	height: 87vh;
+	width: 100%;
+} */
+.bgright p{
+	color: white;
+}
+
+.form-heading{
+	color: #baa16d;
+	padding-left: 27px;
+}
+.demo-heading {
+	color: #baa16d;
+}
+.demo-title{
+	/* margin-bottom: 41px !important; */
+	/* font-size:35px; */
+	margin-top: -101px 
+}
+.header-social{
+	margin-top:2.5rem!important
+}
+
+.header-menu{
+	height: 45px;
+}
+.footer-logo{
+	width: 180px
+}
+.feature-about{
+	width: 100%;
+}
+.register-button{
+	margin-top: 54px
+}
+.team-about{
+	width:100px
+}
+.slider-img{
+	width:100px
+}
+.feature-text-color{
+	color:#ffffff!important
+}

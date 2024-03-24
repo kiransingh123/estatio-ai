@@ -20,23 +20,9 @@ export default function Footer() {
 					<h3>Stay In Touch</h3>
 					<div className="email_section">
 						<p>
-                            <Link to="mailto:info@estatio.com">info@estatio.com</Link>
-						</p>
-						<p>
-                            <Link to="mailto:contact@estatio.com">contact@estatio.com</Link>
+                            <Link to="mailto:yazan@estatio.ai">yazan@estatio.ai</Link>
 						</p>
 					</div>
-			   </div>
-			</div>
-			<div className="col-lg-4 mt-5">
-				<div className="social-links">
-					<h3>Our Social Networks</h3>
-				  <ul>
-                  <li> <Link to="/"><i className="fa fa-facebook"></i></Link></li>
-                    <li> <Link to="/"><i className="fa fa-twitter"></i></Link></li>
-                    <li> <Link to="/"><i className="fa fa-linkedin"></i></Link></li>
-                    <li> <Link to="/"><i className="fa fa-instagram"></i></Link></li>
-				  </ul>
 			   </div>
 			</div>
 			

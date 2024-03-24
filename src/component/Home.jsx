@@ -1,14 +1,16 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import Footer from '../common/Footer.jsx';
-import Banner from './Banner.jsx';
+// import Footer from '../common/Footer.jsx';
 import Service from './Service.jsx';
 import Trainding from './Trainding.jsx';
 import Testimonial from './Testimonial.jsx';
 import emailjs from '@emailjs/browser';
+import ReactPlayer from 'react-player'
+import LoadVideo from '../assets/banner_2_mp.mp4';
+import Logo from '../assets/new_log.png';
 
 export default function Home() {
-	// const home = useRef();
+	const home = useRef();
 	const about = useRef();
 	const demo = useRef();
 	const contact = useRef();
@@ -38,16 +40,16 @@ export default function Home() {
   return (
 	  <>
 		{/* Header section */}
-		<header id="header" className="header fixed-top">
+		<header  id="header" className="header fixed-top">
 			<div className="container-fluid ">
 				<div className="row">
 					<div className="col-lg-2">
-					<Link to="/" className="logo d-flex align-items-center"><img src="assets/img/img_new/new_log.png" alt="" /></Link>    
+					<Link to="/" className="logo d-flex align-items-center"><img src={Logo} alt="" /></Link>    
 					</div>
 					<div className="col-lg-7">
 						<nav id="navbar" className="navbar mt-4 justify-content-between">
 							<ul>
-							<li><Link to="/" className="nav-link scrollto active">HOME</Link></li>
+							<li onClick={()=>scrollHandler(home)}><Link to="/" className="nav-link scrollto active">HOME</Link></li>
 							<li onClick={()=>scrollHandler(about)}><Link to="/" className="nav-link scrollto ">ABOUT</Link></li>
 							<li onClick={()=>scrollHandler(demo)} ><Link to="/" className="nav-link scrollto ">DEMO</Link></li>
 							<li onClick={()=>scrollHandler(contact)}><Link to="/" className="nav-link scrollto ">CONTACT</Link></li>
@@ -70,7 +72,33 @@ export default function Home() {
 			</div>
 		</header>
 		{/* Banner section  */}
-		<Banner />
+		<section ref={home} id="hero" className=" d-flex align-items-center">
+		<div className="container-fluid">
+			<div className="row">
+				<div className="col-md-12">
+				<div id="carouselExampleCaptions" className="carousel slide">				
+				 <div className="carousel-inner">
+				   <div className="carousel-item active">
+					<ReactPlayer
+						className="d-block w-100"
+						url={LoadVideo}
+						width='100%'
+						height='100%'
+						controls={true}
+						loop={true}
+						muted={false}
+						// playing={true}
+					/>
+					 <div className="carousel-caption d-flex flex-column h-100 align-items-center justify-content-center bottom-0">
+					   <p className="bg-dark bg-opacity-50 py-2 px-4">Finding a place to rent with the power of Data and AI !</p>
+					 </div>
+				   </div>
+				 </div>
+			   </div>
+				</div>
+			</div>
+	   </div>
+   </section>
 		<main id="main">
 		{/* About section */}
 		<section id="about" className="about" ref={about}>
@@ -78,14 +106,18 @@ export default function Home() {
 			  <div className="row">
 				<div className="col-lg-7" >
 					<div className="content">
-                        <h3>about us</h3>
                         <h2>Estatio revolutionizing the rental search experience !</h2>
                         <p>
-						Welcome to Estatio, where we're rewriting the rules of rental searches. Gone are the days of drowning in endless listings, unsure where to turn next. Our journey began with a simple realization: the current process is broken. From the stress of navigating numerous listings to the frustration of limited comparison options, renters like you deserve more.
+						Welcome to Estatio, where we're rewriting the rules of rental searches. Our journey began with a
+simple realization: the current process is broken. From the stress of navigating numerous listings to
+the frustration of limited comparison options, renters like you deserve more. Estatio harnesses the
+power of cutting-edge AI to streamline your rental search experience. Say goodbye to wasted time
+and energy – our personalized recommendations, driven by AI, ensure that every property you
+encounter aligns perfectly with your preferences.
 						<br />
-						That's why we're here. Estatio harnesses the power of cutting-edge AI to streamline your rental search experience. Say goodbye to wasted time and energy – our personalized recommendations, driven by AI, ensure that every property you encounter aligns perfectly with your preferences. But we don't stop there. With our intuitive chatbot as your personal assistant, finding your dream rental is easier than ever before.
-						<br />
-						But that's not all. At Estatio, we're not content with just scratching the surface. We're pioneering a new era of rental comparisons, going beyond mere pricing to provide comprehensive insights into each property. Join us at Estatio and discover a smarter, simpler way to find your next home.
+						But that's not all. At Estatio, we're pioneering a new era of rental comparisons, going beyond mere
+pricing to provide comprehensive insights into each property. Join us at Estatio and discover a
+smarter, simpler way to find your next home.
 
                         </p>
                         <div className="leftsection">
@@ -117,23 +149,29 @@ export default function Home() {
 				<div className="row feture-tabs" >
 					<div className="col-lg-7 bgright_demo ">
 						<div className="content ">
-						<h2 className="demo-title" >Embark on a Journey with Estatio</h2>
+						<h2 className="demo-title" >Embark on a Journey with Estatio
+</h2>
 						<p>
-						Experience rental hunting like never before with Estatio. Our chatbot interface transforms frustration into ease, prioritizing your preferences and tailoring your rental journey to perfection. Discover the magic of AI-driven recommendations as our finely-tuned chatbot guides you through options that align seamlessly with your needs.
+						Experience rental hunting like never before with Estatio. Our chatbot interface transforms frustration
+into ease, prioritizing your preferences and tailoring your rental journey perfectly. Discover AI-driven
+recommendations as our chatbot guides you through options that align seamlessly with your needs.
 						<br />
-						Our demo offers a tantalizing glimpse into the future of rental search with Estatio.AI. While providing a taste of the effortless experience to come, please note that data accuracy and completeness may vary in this demonstration. However, envision a platform where a chatbot not only presents options but also showcases images, videos, and interactive interfaces. 
-						{/* Imagine seamlessly comparing rentals based on various metrics beyond pricing. With Estatio this future is within reach. Sign up now for our full-featured beta and be part of the rental revolution! */}
+						Our demo offers a glimpse into the future of rental search with Estatio. While providing a taste of the
+effortless experience to come, please note that data accuracy may vary. Envision a platform where a
+chatbot not only presents options but also showcases images, videos, and interactive interfaces.
+With Estatio, this future is within reach. Sign up now for our beta and be part of Estatio !
+
 						</p>
 						
 						</div>
 					</div>
 					<div className="col-lg-5">
-						{/* <img src="assets/img/img_6.jpg" className="img-fluid hover03 feature-about" alt="" /> */}
-						{/* <iframe
+						
+						<iframe
 		src="https://estatio.streamlit.app/?embed=true"
 		height="546px"
 		style={{ width: "100%", border: "none" }}
-		></iframe> */}
+		></iframe>
 					</div>
 				</div>
 			</div>
@@ -141,28 +179,30 @@ export default function Home() {
 		{/* Contat section */}
 		<section id="contact" className="contact" ref={contact}>
 				  <div className="container" >
-				  <form ref={form} onSubmit={sendEmail} className="php-email-form">
-			<div className="row gy-4">
-				<div className="col-lg-9">
-				<h1 className="form-heading">Register for Beta</h1>
-					
+					  <form ref={form} onSubmit={sendEmail} className="php-email-form">
+						  <div className="col-lg-12">
 					<div className="row gy-4">
-						<div className="col-md-6">
-							<input type="text" name="user_name" className="form-control" placeholder="Your Name"  />
+						<div className="col-lg-9">
+						<h1 className="form-heading">Register for Beta</h1>
+							
+							<div className="row gy-4">
+								<div className="col-md-6">
+									<input type="text" name="user_name" className="form-control" placeholder="Your Name"  />
+								</div>
+								<div className="col-md-6 ">
+									<input type="email" className="form-control" name="user_email" placeholder="Your Email"  />
+								</div>
+								<div className="col-md-12">
+									<textarea className="form-control" name="message" rows="3" placeholder="Feedback and Suggestions"></textarea>
+								</div>
+							</div>
+							
 						</div>
-						<div className="col-md-6 ">
-							<input type="email" className="form-control" name="user_email" placeholder="Your Email"  />
-						</div>
-						<div className="col-md-12">
-							<textarea className="form-control" name="message" rows="3" placeholder="Feedback and Suggestions"></textarea>
-						</div>
+						<div className="col-lg-3 register-button" >
+						<button className="learn-more" type='submit'>Register </button>
 					</div>
-					
-				</div>
-				<div className="col-lg-3 register-button" >
-				<button className="learn-more" type='submit'>Register </button>
-			</div>
-					  </div>
+							  </div>
+							  </div>
 					  </form>
 		</div>
 		</section>
@@ -172,7 +212,32 @@ export default function Home() {
 		<Testimonial />
 		
     </main>
-   <Footer />
+		  {/* <Footer /> */}
+		  <footer ref={home} id="footer" className="footer">
+	<div className="container">
+		<div className="row">
+			<div className="col-lg-4 mt-5">
+            <Link to="/" className="logo align-items-center">
+                <img src="assets/img/img_new/new_log.png" alt="" className='footer-logo'/>
+                
+                </Link>
+				
+
+			</div>
+			<div className="col-lg-4 mt-5">
+				<div className="social-links">
+					<h3>Stay In Touch</h3>
+					<div className="email_section">
+						<p>
+                            <Link to="mailto:yazan@estatio.ai">yazan@estatio.ai</Link>
+						</p>
+					</div>
+			   </div>
+			</div>
+			
+		</div>
+	</div>
+ </footer>
    </>
   )
 }
