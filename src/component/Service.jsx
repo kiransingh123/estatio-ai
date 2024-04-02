@@ -3,31 +3,31 @@ export default function service() {
   return (
     <>
 	<section id="values" className="values">
-		<div className="container-fluid" >
+		<div className="container-fluid" data-aos="fade-up">
 			  <header class="section-header">
 	   			<div className="row overlay">
-		  <div className="col-lg-3" >
+		  <div className="col-lg-3" data-aos="slide-up">
 			 <div className="box">
 				<img src="assets/img/icon-1.png" className="img-fluid" alt="" />
 				<h3>Personalized Recommendations</h3>
 				<p className='feature-text-color'>Elevate your search experience with AI-driven, personalized rental suggestions crafted just for you.</p>
 			 </div>
 		  </div>
-		  <div className="col-lg-3 mt-4 mt-lg-0" >
+		  <div className="col-lg-3 mt-4 mt-lg-0" data-aos="slide-down">
 			 <div className="box">
 				<img src="assets/img/icon-2.png" className="img-fluid" alt="" />
 				<h3>Smart Property Management</h3>
 				<p className='feature-text-color'>Effortlessly sort through rentals based on key features, ensuring an organized and efficient search.</p>
 			 </div>
 		  </div>
-		  <div className="col-lg-3 mt-4 mt-lg-0" >
+		  <div className="col-lg-3 mt-4 mt-lg-0" data-aos="slide-up">
 			 <div className="box">
 				<img src="assets/img/icon-3.png" className="img-fluid" alt=""/>
 				<h3>AI-Powered Chatbot Assistant</h3>
 				<p className='feature-text-color'>Meet your personal assistant, a finely tuned chatbot, ready to guide you through the rental process with ease.</p>
 			 </div>
 		  </div>
-		  <div className="col-lg-3" >
+		  <div className="col-lg-3" data-aos="slide-down">
 			<div className="box">
 				<img src="assets/img/icon-1.png" className="img-fluid" alt=""/>
 				<h3>Comprehensive Property Insights</h3>

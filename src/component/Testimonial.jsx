@@ -9,8 +9,8 @@ export default function testimonial() {
   return (
     <>
 	<section id="team" className="team about">
-		<div className="container-fluid" >
-			<div className="row feture-tabs">
+		<div className="container-fluid" data-aos="fade-up">
+			<div className="row feture-tabs" data-aos="fade-up">
 				<div className="col-lg-7">
 					<div className="content">
 					<h2>From Our Great Initial Users</h2>

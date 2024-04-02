@@ -1,6 +1,5 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-// import Footer from '../common/Footer.jsx';
 import Service from './Service.jsx';
 import Trainding from './Trainding.jsx';
 import Testimonial from './Testimonial.jsx';
@@ -8,8 +7,18 @@ import emailjs from '@emailjs/browser';
 import ReactPlayer from 'react-player'
 import LoadVideo from '../assets/banner_2_mp.mp4';
 import Logo from '../assets/new_log.png';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Home() {
+	useEffect(() => {
+		Aos.init({
+			offset: 200,
+			duration: 1000,
+			easing: 'ease-in-sine',
+			delay: 200,
+		  });
+	}, []);
 	const home = useRef();
 	const about = useRef();
 	const demo = useRef();
@@ -99,9 +108,9 @@ export default function Home() {
 		<main id="main">
 		{/* About section */}
 		<section id="about" className="about" ref={about}>
-		   <div className="container-fluid">
+		   <div className="container-fluid" data-aos="fade-up">
 			  <div className="row about-tabs">
-				<div className="col-lg-7" >
+				<div className="col-lg-7" data-aos="fade-up" data-aos-delay="200">
 					<div className="content">
 						
                         <h2>Estatio revolutionizing the rental search experience !</h2>
@@ -131,8 +140,7 @@ smarter, simpler way to find your next home.
                         </div>
 				    </div>
                 </div>
-                {/* <div className="col-lg-5 " data-aos="zoom-out" data-aos-delay="200"> */}
-                <div className="col-lg-5 " >
+                <div className="col-lg-5 " data-aos="zoom-out" data-aos-delay="200">
                     <div className="rightimg">
                     <img src="assets/img/img_1.jpg" className="img-fluid hover03" alt="" />
                 </div>
@@ -145,7 +153,7 @@ smarter, simpler way to find your next home.
        {/* Demo section */}
 		<section id="features" className="features about" ref={demo}>
 			<div className="container-fluid aos-init aos-animate" data-aos="fade-up">
-				<div className="row feture-tabs" >
+				<div className="row feture-tabs" data-aos="fade-up">
 					<div className="col-lg-7 bgright_demo ">
 						<div className="content ">
 						<h2 className="demo-title topspace">Embark on a Journey with Estatio</h2>
@@ -177,9 +185,9 @@ With Estatio, this future is within reach. Sign up now for our beta and be part 
 		</section>
 		{/* Contat section */}
 		<section id="contact" className="contact" ref={contact}>
-				  <div className="container contact-tabs" >
+				  <div className="container contact-tabs" data-aos="fade-up">
 					  <form ref={form} onSubmit={sendEmail} className="php-email-form">
-						  <div className="col-lg-12">
+						  <div className="col-lg-12" data-aos="fade-up">
 						  <h1 className="form-heading">Register for Beta</h1>
 					<div className="row gy-4">
 						<div className="col-lg-9">

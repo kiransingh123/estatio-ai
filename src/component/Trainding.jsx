@@ -8,7 +8,7 @@ export default function Tranding() {
   return (
     <>
 	<section id="testimonials" className="testimonials">
-	   <div className="container-fluid" >
+	   <div className="container-fluid" data-aos="fade-up">
 		   <div className="row">
 			   <div className="col-lg-3">
 				   <img src="assets/img/Linetopnew.png" className="img-fluid" alt="" />
@@ -21,8 +21,8 @@ export default function Tranding() {
 					   <img src="assets/img/icon-rightwhite.png" className="img-fluid righticonside iconslider swiper-button-next" alt="" onClick={() => swiperref.current?.slideNext()} />
 				   </div>
 			   </div>
-			   <div className="col-lg-9">
-					<div className="testimonials-slider swiper" >
+			   <div className="col-lg-9" >
+					<div className="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200" >
 						 <div className="swiper-wrapper">
 								  <Swiper
 									  
