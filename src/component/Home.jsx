@@ -82,9 +82,9 @@ export default function Home() {
 						width='100%'
 						height='100%'
 						controls={true}
-						loop={true}
+						// loop={true}
 						muted={false}
-						// playing={true}
+						playing={true}
 					/>
 					 <div className="carousel-caption d-flex flex-column h-100 align-items-center justify-content-center bottom-0">
 					   <p className="bg-dark bg-opacity-50 py-2 px-4">Finding a place to rent with the power of Data and AI !</p>
@@ -112,7 +112,8 @@ the frustration of limited comparison options, renters like you deserve more. Es
 power of cutting-edge AI to streamline your rental search experience. Say goodbye to wasted time
 and energy – our personalized recommendations, driven by AI, ensure that every property you
 encounter aligns perfectly with your preferences.
-						<br />
+									  <br />
+									  <br />
 						But that's not all. At Estatio, we're pioneering a new era of rental comparisons, going beyond mere
 pricing to provide comprehensive insights into each property. Join us at Estatio and discover a
 smarter, simpler way to find your next home.
@@ -152,7 +153,8 @@ smarter, simpler way to find your next home.
 						Experience rental hunting like never before with Estatio. Our chatbot interface transforms frustration
 into ease, prioritizing your preferences and tailoring your rental journey perfectly. Discover AI-driven
 recommendations as our chatbot guides you through options that align seamlessly with your needs.
-						<br />
+									  <br />
+									  <br />
 						Our demo offers a glimpse into the future of rental search with Estatio. While providing a taste of the
 effortless experience to come, please note that data accuracy may vary. Envision a platform where a
 chatbot not only presents options but also showcases images, videos, and interactive interfaces.
