@@ -259,7 +259,7 @@
       },
 
       1200: {
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: 40
       },
        1920: {
@@ -291,7 +291,7 @@ new Swiper('.team-slider', {
       },
 
       1200: {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 40
       },
        1920: {

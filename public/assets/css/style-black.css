@@ -39,7 +39,7 @@ body {
     background-image: url(../img/about_bgnew.png);
 }*/
 .Trending_heading{
-	color: #ffffff!important;
+	color:#baa16d !important;
 }
 /*.bgright {
     background-image: url(../img/about_bgnew1.png);
@@ -73,7 +73,7 @@ body {
 }
 .contact .php-email-form{
 	color: black !important;
-    padding: 30px;
+    /* padding: 30px; */
 }
 .form-control{
 	background-color: #7a7373!important;
@@ -97,7 +97,7 @@ body {
 
 .form-heading{
 	color: #baa16d;
-	padding-left: 27px;
+	margin-bottom: 30px;
 }
 .demo-heading {
 	color: #baa16d;
@@ -105,5 +105,8 @@ body {
 .demo-title{
 	/* margin-bottom: 41px !important; */
 	/* font-size:35px; */
-	margin-top: -101px 
+	/* margin-top: -101px ; */
+}
+.fixed-top{
+	background-color: black;
 }

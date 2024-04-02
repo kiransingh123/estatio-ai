@@ -19,16 +19,16 @@ export default function testimonial() {
 				<div className="col-lg-5">
 					
 				</div>
-				<div className="col-lg-12 mt-5">
+				<div className="col-lg-12">
 					<div className="team-slider swiper">
 					<div className="swiper-wrapper">
                     <Swiper
                         modules={[Autoplay]}
-                        spaceBetween={40}
+                        spaceBetween={30}
                         slidesPerView={2}
-                        autoplay={{ delay: 1000 }}
+                        autoplay={{ delay: 4000 }}
                         loop={true} 
-                        speed={1200}
+                        speed={2000}
                                                    
                     >
                         <SwiperSlide>
@@ -63,20 +63,6 @@ personal assistant &#x1F60A;"</p>
                                 </div>
                             </div>
                         </SwiperSlide>
-                        {/* <SwiperSlide>
-                            <div className="swiper-slide">
-                                <div className="card">
-                                <img className="card-img-top slider-img" src="assets/img/img_new/Adam_Stone2.png" alt="Card image"  />
-                                <div className="card-body">
-                                    <h4 className="card-title">Adam Stone <span>/ CEO at Google INC</span></h4> 
-                                    <span className="arrow">
-                                        <img src="assets/img/img_new/Vector_team.png" />
-                                    </span>
-                                    <p className="card-text">"Estatio.AI is a game-changer! I love how it takes the hassle out of comparing rentals and provides insights beyond just pricing. It's such a relief to have a platform that understands what I need and makes the whole process stress-free.”</p>
-                                </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>   */}
                     </Swiper>
 					</div>
 				</div>

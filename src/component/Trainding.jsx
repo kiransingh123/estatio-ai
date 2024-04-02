@@ -1,9 +1,10 @@
-import React from 'react'
+import React , { useRef }from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay , Navigation} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
-export default function tranding() {
+export default function Tranding() {
+	const swiperref = useRef();
   return (
     <>
 	<section id="testimonials" className="testimonials">
@@ -11,25 +12,29 @@ export default function tranding() {
 		   <div className="row">
 			   <div className="col-lg-3">
 				   <img src="assets/img/Linetopnew.png" className="img-fluid" alt="" />
-				   <h3 className="Trending_heading">Trending <br />Properties</h3>
+				   <h3 className="Trending_heading">Trending Properties</h3>
 				   <div className="bgright">
 					   <p>Explore the future of rental discovery with our Trending Properties section! Currently under construction, soon you'll enjoy personalized rental playlists tailored to your unique tastes and preferences, curated based on local events and trends in your area of interest.</p>
 				   </div>
 				   <div className="mt-5">
-					   <img src="assets/img/icon-leftwhite.png" className="img-fluid iconslider swiper-button-prev" alt="" />
-					   <img src="assets/img/icon-rightwhite.png" className="img-fluid righticonside iconslider swiper-button-next" alt="" />
+					   <img src="assets/img/icon-leftwhite.png" className="img-fluid iconslider swiper-button-prev" alt="" onClick={() => swiperref.current?.slidePrev()} />
+					   <img src="assets/img/icon-rightwhite.png" className="img-fluid righticonside iconslider swiper-button-next" alt="" onClick={() => swiperref.current?.slideNext()} />
 				   </div>
 			   </div>
 			   <div className="col-lg-9">
 					<div className="testimonials-slider swiper" >
 						 <div className="swiper-wrapper">
-						 <Swiper
-							 modules={[Autoplay]}
-                            spaceBetween={40}
+								  <Swiper
+									  
+							 modules={[Autoplay, Navigation]}
+                            spaceBetween={30}
                             slidesPerView={3}
-                            autoplay={{ delay: 1000 }}
+                            autoplay={{ delay: 4000 }}
                             loop={true} 
-                            speed={1200}
+							speed={2000}
+							onBeforeInit={(swiper) => {
+							swiperref.current = swiper;
+							}}
 							>
 							<SwiperSlide><div className="swiper-slide">
 							   <div className="Trending-Properties-item">

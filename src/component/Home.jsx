@@ -21,7 +21,6 @@ export default function Home() {
 
 	/* Email send code */
 	const sendEmail = (e) => {
-		console.log('Hi inisiate');
 		e.preventDefault();
 		emailjs
 		  .sendForm('service_yixue8e', 'template_yxst9ay', form.current, {
@@ -29,8 +28,7 @@ export default function Home() {
 		  })
 		  .then(
 			() => {
-				  console.log('SUCCESS!');
-				  
+				  console.log('SUCCESS!');	  
 			},
 			(error) => {
 			  console.log('FAILED...', error.text);
@@ -47,19 +45,18 @@ export default function Home() {
 					<Link to="/" className="logo d-flex align-items-center"><img src={Logo} alt="" /></Link>    
 					</div>
 					<div className="col-lg-7">
-						<nav id="navbar" className="navbar mt-4 justify-content-between">
+						<nav id="navbar" className="navbar mt-5 justify-content-between">
 							<ul>
 							<li onClick={()=>scrollHandler(home)}><Link to="/" className="nav-link scrollto active">HOME</Link></li>
 							<li onClick={()=>scrollHandler(about)}><Link to="/" className="nav-link scrollto ">ABOUT</Link></li>
 							<li onClick={()=>scrollHandler(demo)} ><Link to="/" className="nav-link scrollto ">DEMO</Link></li>
 							<li onClick={()=>scrollHandler(contact)}><Link to="/" className="nav-link scrollto ">CONTACT</Link></li>
-							<li><Link to="/"><img src="assets/img/black-line.png" className='header-menu' /></Link></li>
 							</ul>
 							<i className="bi bi-list mobile-nav-toggle"></i>
 						</nav>
 					</div>
 					<div className="col-lg-3">
-						<div className="socialicon mt-4 header-social"  >
+						<div className="socialicon mt-5 header-social"  >
 							<ul>
 								<li> <Link to="/"><i className="fa fa-facebook"></i></Link></li>
 								<li> <Link to="/"><i className="fa fa-twitter"></i></Link></li>
@@ -103,9 +100,10 @@ export default function Home() {
 		{/* About section */}
 		<section id="about" className="about" ref={about}>
 		   <div className="container-fluid">
-			  <div className="row">
+			  <div className="row about-tabs">
 				<div className="col-lg-7" >
 					<div className="content">
+						
                         <h2>Estatio revolutionizing the rental search experience !</h2>
                         <p>
 						Welcome to Estatio, where we're rewriting the rules of rental searches. Our journey began with a
@@ -149,8 +147,7 @@ smarter, simpler way to find your next home.
 				<div className="row feture-tabs" >
 					<div className="col-lg-7 bgright_demo ">
 						<div className="content ">
-						<h2 className="demo-title" >Embark on a Journey with Estatio
-</h2>
+						<h2 className="demo-title topspace">Embark on a Journey with Estatio</h2>
 						<p>
 						Experience rental hunting like never before with Estatio. Our chatbot interface transforms frustration
 into ease, prioritizing your preferences and tailoring your rental journey perfectly. Discover AI-driven
@@ -178,13 +175,12 @@ With Estatio, this future is within reach. Sign up now for our beta and be part 
 		</section>
 		{/* Contat section */}
 		<section id="contact" className="contact" ref={contact}>
-				  <div className="container" >
+				  <div className="container contact-tabs" >
 					  <form ref={form} onSubmit={sendEmail} className="php-email-form">
 						  <div className="col-lg-12">
+						  <h1 className="form-heading">Register for Beta</h1>
 					<div className="row gy-4">
 						<div className="col-lg-9">
-						<h1 className="form-heading">Register for Beta</h1>
-							
 							<div className="row gy-4">
 								<div className="col-md-6">
 									<input type="text" name="user_name" className="form-control" placeholder="Your Name"  />
@@ -213,28 +209,19 @@ With Estatio, this future is within reach. Sign up now for our beta and be part 
 		
     </main>
 		  {/* <Footer /> */}
-		  <footer ref={home} id="footer" className="footer">
-	<div className="container">
+		  <footer  id="footer" className="footer">
+	<div className="container-fluid">
 		<div className="row">
-			<div className="col-lg-4 mt-5">
-            <Link to="/" className="logo align-items-center">
-                <img src="assets/img/img_new/new_log.png" alt="" className='footer-logo'/>
-                
-                </Link>
-				
-
+			<div className="col-lg-2 centertype">
+				<Link to="/" className="logo align-items-center">
+					<img src="assets/img/img_new/new_log.png" alt="" className='footer-logo'/>
+				</Link>
 			</div>
-			<div className="col-lg-4 mt-5">
-				<div className="social-links">
-					<h3>Stay In Touch</h3>
-					<div className="email_section">
-						<p>
-                            <Link to="mailto:yazan@estatio.ai">yazan@estatio.ai</Link>
-						</p>
-					</div>
-			   </div>
+			<div className='col-lg-10'>
+				<div className="email_section">
+					<p><Link to="mailto:yazan@estatio.ai">yazan@estatio.ai</Link></p>
+				</div>
 			</div>
-			
 		</div>
 	</div>
  </footer>
