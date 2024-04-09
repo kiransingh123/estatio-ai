@@ -34,7 +34,21 @@ export default function Tranding() {
 							speed={2000}
 							onBeforeInit={(swiper) => {
 							swiperref.current = swiper;
-							}}
+									  }}
+									  breakpoints={{
+										320: {
+										  // width: 576,
+										  slidesPerView: 1,
+										},
+										520: {
+											// width: 576,
+											slidesPerView: 1,
+										  },
+										768: {
+										  // width: 768,
+										  slidesPerView: 3,
+										},
+									  }}
 							>
 							<SwiperSlide><div className="swiper-slide">
 							   <div className="Trending-Properties-item">

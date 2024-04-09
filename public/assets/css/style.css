@@ -378,7 +378,7 @@ color: #000000;
 
 @media (max-width: 1200px) {
   .mobile-nav-toggle {
-    display: block;
+    display: none;
     position: absolute;
     right: 0px;
     top: -66px;
@@ -543,6 +543,29 @@ section#hero {
   .hero .hero-img img {
     width: 80%;
   }
+
+  body[data-aos-delay="200"] [data-aos].aos-animate {
+    transition-delay: .0s!important;
+}
+  body[data-aos-duration="1000"] [data-aos] {
+    transition-duration: 0s!important;
+}
+  footer img {
+    width: 20% !important;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+}
+.socialicon ul{
+  display: none !important;
+}
+.email_section {
+  margin-top: 0px !important;
+  text-align: center;
+  float: none !important;
+}
+
+
 }
 
 @media (max-width: 768px) {
