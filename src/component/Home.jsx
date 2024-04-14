@@ -55,13 +55,13 @@ export default function Home() {
 					</div>
 					<div className="col-lg-7">
 						<nav id="navbar" className="navbar mt-5 justify-content-between">
-							<ul>
+							<ul className=''>
 							<li onClick={()=>scrollHandler(home)}><Link to="/" className="nav-link scrollto active">HOME</Link></li>
 							<li onClick={()=>scrollHandler(about)}><Link to="/" className="nav-link scrollto ">ABOUT</Link></li>
 							<li onClick={()=>scrollHandler(demo)} ><Link to="/" className="nav-link scrollto ">DEMO</Link></li>
 							<li onClick={()=>scrollHandler(contact)}><Link to="/" className="nav-link scrollto ">CONTACT</Link></li>
 							</ul>
-							<i className="bi bi-list mobile-nav-toggle"></i>
+							<i className="bi bi-list mobile-nav-toggle"data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"></i>
 						</nav>
 					</div>
 					<div className="col-lg-3">
@@ -235,6 +235,20 @@ With Estatio, this future is within reach. Sign up now for our beta and be part 
 		</div>
 	</div>
  </footer>
+ <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExample">
+  <div class="offcanvas-header">
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">X</button>
+  </div>
+  <div class="offcanvas-body">
+  	<ul className='mobiletypeul'>
+		<li onClick={()=>scrollHandler(home)}><Link to="/" className="nav-link scrollto active">HOME</Link></li>
+		<li onClick={()=>scrollHandler(about)}><Link to="/" className="nav-link scrollto ">ABOUT</Link></li>
+		<li onClick={()=>scrollHandler(demo)} ><Link to="/" className="nav-link scrollto ">DEMO</Link></li>
+		<li onClick={()=>scrollHandler(contact)}><Link to="/" className="nav-link scrollto ">CONTACT</Link></li>
+	</ul>
+  </div>
+</div>
    </>
   )
 }
+

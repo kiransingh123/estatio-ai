@@ -326,3 +326,8 @@ new Swiper('.team-slider', {
   new PureCounter();
 
 })();
+$(document).ready(function(){
+  $(".mobile-nav-toggle").click(function(){
+  $(".mobiletypeul").show ();
+  });
+  });

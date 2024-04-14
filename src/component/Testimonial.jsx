@@ -28,21 +28,21 @@ export default function testimonial() {
                         slidesPerView={2}
                         autoplay={{ delay: 4000 }}
                         loop={true} 
-                                      speed={2000}
-                                      breakpoints={{
-                                        320: {
-                                          // width: 576,
-                                          slidesPerView: 1,
-                                        },
-                                        520: {
-                                            // width: 576,
-                                            slidesPerView: 1,
-                                          },
-                                        768: {
-                                          // width: 768,
-                                          slidesPerView: 2,
-                                        },
-                                      }}
+                        speed={2000}
+                        breakpoints={{
+                            320: {
+                              // width: 576,
+                              slidesPerView: 1,
+                            },
+                            520: {
+                                // width: 576,
+                                slidesPerView: 1,
+                              },
+                            768: {
+                              // width: 768,
+                              slidesPerView: 2,
+                            },
+                          }}
                                                    
                     >
                         <SwiperSlide>
